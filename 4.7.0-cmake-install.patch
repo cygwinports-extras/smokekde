@@ -1,0 +1,201 @@
+--- origsrc/smokekde-4.7.0/akonadi/CMakeLists.txt	2011-08-08 17:45:39.054855400 -0500
++++ src/smokekde-4.7.0/akonadi/CMakeLists.txt	2011-08-05 06:45:32.930111300 -0500
+@@ -58,7 +58,7 @@ target_link_libraries(smokeakonadi
+     )
+ 
+ set_target_properties(smokeakonadi PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+-install(TARGETS smokeakonadi DESTINATION ${LIB_INSTALL_DIR} )
++install(TARGETS smokeakonadi ${INSTALL_TARGETS_DEFAULT_ARGS} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../akonadi_smoke.h DESTINATION include/smoke )
+ 
+ ########### install files ###############
+--- origsrc/smokekde-4.7.0/attica/CMakeLists.txt	2011-08-08 17:45:39.056855500 -0500
++++ src/smokekde-4.7.0/attica/CMakeLists.txt	2011-08-05 06:45:32.942112000 -0500
+@@ -33,7 +33,7 @@ target_link_libraries(smokeattica
+ )
+ 
+ set_target_properties(smokeattica PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+-install(TARGETS smokeattica DESTINATION ${LIB_INSTALL_DIR} )
++install(TARGETS smokeattica ${INSTALL_TARGETS_DEFAULT_ARGS} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../attica_smoke.h DESTINATION include/smoke )
+ 
+ ########### install files ###############
+--- origsrc/smokekde-4.7.0/kate/CMakeLists.txt	2011-08-08 17:45:39.059855700 -0500
++++ src/smokekde-4.7.0/kate/CMakeLists.txt	2011-08-05 06:45:32.951112500 -0500
+@@ -57,5 +57,5 @@ target_link_libraries(smokekate
+ )
+ 
+ set_target_properties(smokekate PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+-install(TARGETS smokekate DESTINATION ${LIB_INSTALL_DIR} )
++install(TARGETS smokekate ${INSTALL_TARGETS_DEFAULT_ARGS} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../kate_smoke.h DESTINATION include/smoke)
+--- origsrc/smokekde-4.7.0/kdecore/CMakeLists.txt	2011-08-08 17:45:39.060855700 -0500
++++ src/smokekde-4.7.0/kdecore/CMakeLists.txt	2011-08-08 17:44:14.172000300 -0500
+@@ -78,6 +78,6 @@ target_link_libraries(smokekdecore
+ )
+ 
+ set_target_properties(smokekdecore PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+-install(TARGETS smokekdecore DESTINATION ${LIB_INSTALL_DIR} )
++install(TARGETS smokekdecore ${INSTALL_TARGETS_DEFAULT_ARGS} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../kdecore_smoke.h DESTINATION include/smoke)
+-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kde-config.xml DESTINATION share/${SMOKE_GEN_BIN})
++install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kde-config.xml DESTINATION share/smokegen)
+--- origsrc/smokekde-4.7.0/kdeui/CMakeLists.txt	2011-08-08 17:45:39.063855900 -0500
++++ src/smokekde-4.7.0/kdeui/CMakeLists.txt	2011-08-05 06:45:32.973113800 -0500
+@@ -79,5 +79,5 @@ target_link_libraries(smokekdeui
+ )
+ 
+ set_target_properties(smokekdeui PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+-install(TARGETS smokekdeui DESTINATION ${LIB_INSTALL_DIR} )
++install(TARGETS smokekdeui ${INSTALL_TARGETS_DEFAULT_ARGS} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../kdeui_smoke.h DESTINATION include/smoke)
+--- origsrc/smokekde-4.7.0/kfile/CMakeLists.txt	2011-08-08 17:45:39.065856000 -0500
++++ src/smokekde-4.7.0/kfile/CMakeLists.txt	2011-08-05 06:45:32.991114800 -0500
+@@ -43,5 +43,5 @@ target_link_libraries(smokekfile
+ )
+ 
+ set_target_properties(smokekfile PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+-install(TARGETS smokekfile DESTINATION ${LIB_INSTALL_DIR} )
++install(TARGETS smokekfile ${INSTALL_TARGETS_DEFAULT_ARGS} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../kfile_smoke.h DESTINATION include/smoke)
+--- origsrc/smokekde-4.7.0/khtml/CMakeLists.txt	2011-08-08 17:45:39.068856200 -0500
++++ src/smokekde-4.7.0/khtml/CMakeLists.txt	2011-08-05 06:45:32.000000000 -0500
+@@ -76,5 +76,5 @@ target_link_libraries(smokekhtml
+ )
+ 
+ set_target_properties(smokekhtml PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+-install(TARGETS smokekhtml DESTINATION ${LIB_INSTALL_DIR} )
++install(TARGETS smokekhtml ${INSTALL_TARGETS_DEFAULT_ARGS} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../khtml_smoke.h DESTINATION include/smoke)
+--- origsrc/smokekde-4.7.0/kio/CMakeLists.txt	2011-08-08 17:45:39.071856300 -0500
++++ src/smokekde-4.7.0/kio/CMakeLists.txt	2011-08-05 06:45:32.000000000 -0500
+@@ -80,5 +80,5 @@ target_link_libraries(smokekio
+ )
+ 
+ set_target_properties(smokekio PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+-install(TARGETS smokekio DESTINATION ${LIB_INSTALL_DIR} )
++install(TARGETS smokekio ${INSTALL_TARGETS_DEFAULT_ARGS} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../kio_smoke.h DESTINATION include/smoke)
+--- origsrc/smokekde-4.7.0/knewstuff2/CMakeLists.txt	2011-08-08 17:45:39.073856500 -0500
++++ src/smokekde-4.7.0/knewstuff2/CMakeLists.txt	2011-08-05 06:45:32.000000000 -0500
+@@ -42,5 +42,5 @@ target_link_libraries(smokeknewstuff2
+ )
+ 
+ set_target_properties(smokeknewstuff2 PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+-install(TARGETS smokeknewstuff2 DESTINATION ${LIB_INSTALL_DIR} )
++install(TARGETS smokeknewstuff2 ${INSTALL_TARGETS_DEFAULT_ARGS} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../knewstuff2_smoke.h DESTINATION include/smoke)
+--- origsrc/smokekde-4.7.0/knewstuff3/CMakeLists.txt	2011-08-08 17:45:39.076856600 -0500
++++ src/smokekde-4.7.0/knewstuff3/CMakeLists.txt	2011-08-05 06:45:32.000000000 -0500
+@@ -42,5 +42,5 @@ target_link_libraries(smokeknewstuff3
+ )
+ 
+ set_target_properties(smokeknewstuff3 PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+-install(TARGETS smokeknewstuff3 DESTINATION ${LIB_INSTALL_DIR} )
++install(TARGETS smokeknewstuff3 ${INSTALL_TARGETS_DEFAULT_ARGS} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../knewstuff3_smoke.h DESTINATION include/smoke)
+--- origsrc/smokekde-4.7.0/kparts/CMakeLists.txt	2011-08-08 17:45:39.078856700 -0500
++++ src/smokekde-4.7.0/kparts/CMakeLists.txt	2011-08-05 06:45:32.000000000 -0500
+@@ -80,5 +80,5 @@ target_link_libraries(smokekparts
+ )
+ 
+ set_target_properties(smokekparts PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+-install(TARGETS smokekparts DESTINATION ${LIB_INSTALL_DIR} )
++install(TARGETS smokekparts ${INSTALL_TARGETS_DEFAULT_ARGS} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../kparts_smoke.h DESTINATION include/smoke)
+--- origsrc/smokekde-4.7.0/ktexteditor/CMakeLists.txt	2011-08-08 17:45:39.080856900 -0500
++++ src/smokekde-4.7.0/ktexteditor/CMakeLists.txt	2011-08-05 06:45:32.000000000 -0500
+@@ -63,5 +63,5 @@ target_link_libraries(smokektexteditor
+  
+ 
+ set_target_properties(smokektexteditor PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+-install(TARGETS smokektexteditor DESTINATION ${LIB_INSTALL_DIR} )
++install(TARGETS smokektexteditor ${INSTALL_TARGETS_DEFAULT_ARGS} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../ktexteditor_smoke.h DESTINATION include/smoke )
+--- origsrc/smokekde-4.7.0/kutils/CMakeLists.txt	2011-08-08 17:45:39.083857000 -0500
++++ src/smokekde-4.7.0/kutils/CMakeLists.txt	2011-08-05 06:45:32.000000000 -0500
+@@ -42,5 +42,5 @@ target_link_libraries(smokekutils
+ )
+ 
+ set_target_properties(smokekutils PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+-install(TARGETS smokekutils DESTINATION ${LIB_INSTALL_DIR} )
++install(TARGETS smokekutils ${INSTALL_TARGETS_DEFAULT_ARGS} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../kutils_smoke.h DESTINATION include/smoke)
+--- origsrc/smokekde-4.7.0/nepomuk/CMakeLists.txt	2011-08-08 17:45:39.086857200 -0500
++++ src/smokekde-4.7.0/nepomuk/CMakeLists.txt	2011-08-05 06:45:32.000000000 -0500
+@@ -54,7 +54,7 @@ target_link_libraries(smokenepomuk
+ )
+ 
+ set_target_properties(smokenepomuk PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+-install(TARGETS smokenepomuk DESTINATION ${LIB_INSTALL_DIR} )
++install(TARGETS smokenepomuk ${INSTALL_TARGETS_DEFAULT_ARGS} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../nepomuk_smoke.h DESTINATION include/smoke )
+ 
+ ########### install files ###############
+--- origsrc/smokekde-4.7.0/nepomukquery/CMakeLists.txt	2011-08-08 17:45:39.088857300 -0500
++++ src/smokekde-4.7.0/nepomukquery/CMakeLists.txt	2011-08-05 06:45:32.000000000 -0500
+@@ -37,7 +37,7 @@ target_link_libraries(smokenepomukquery
+ )
+ 
+ set_target_properties(smokenepomukquery PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+-install(TARGETS smokenepomukquery DESTINATION ${LIB_INSTALL_DIR} )
++install(TARGETS smokenepomukquery ${INSTALL_TARGETS_DEFAULT_ARGS} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../nepomukquery_smoke.h DESTINATION include/smoke )
+ 
+ ########### install files ###############
+--- origsrc/smokekde-4.7.0/okular/CMakeLists.txt	2011-08-08 17:45:39.091857500 -0500
++++ src/smokekde-4.7.0/okular/CMakeLists.txt	2011-08-05 06:45:32.000000000 -0500
+@@ -58,5 +58,5 @@ target_link_libraries(smokeokular
+ )
+ 
+ set_target_properties(smokeokular PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+-install(TARGETS smokeokular DESTINATION ${LIB_INSTALL_DIR} )
++install(TARGETS smokeokular ${INSTALL_TARGETS_DEFAULT_ARGS} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../okular_smoke.h DESTINATION include/smoke)
+--- origsrc/smokekde-4.7.0/plasma/CMakeLists.txt	2011-08-08 17:45:39.093857600 -0500
++++ src/smokekde-4.7.0/plasma/CMakeLists.txt	2011-08-05 06:45:32.000000000 -0500
+@@ -58,7 +58,7 @@ endif(KDE_VERSION VERSION_LESS "4.2.0")
+ 
+ 
+ set_target_properties(smokeplasma PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+-install(TARGETS smokeplasma DESTINATION ${LIB_INSTALL_DIR} )
++install(TARGETS smokeplasma ${INSTALL_TARGETS_DEFAULT_ARGS} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../plasma_smoke.h DESTINATION include/smoke )
+ 
+ ########### install files ###############
+--- origsrc/smokekde-4.7.0/solid/CMakeLists.txt	2011-08-08 17:45:39.096857800 -0500
++++ src/smokekde-4.7.0/solid/CMakeLists.txt	2011-08-05 06:45:32.000000000 -0500
+@@ -61,5 +61,5 @@ target_link_libraries(smokesolid
+ )
+ 
+ set_target_properties(smokesolid PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+-install(TARGETS smokesolid DESTINATION ${LIB_INSTALL_DIR} )
++install(TARGETS smokesolid ${INSTALL_TARGETS_DEFAULT_ARGS} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../solid_smoke.h DESTINATION include/smoke)
+--- origsrc/smokekde-4.7.0/soprano/CMakeLists.txt	2011-08-08 17:45:39.098857900 -0500
++++ src/smokekde-4.7.0/soprano/CMakeLists.txt	2011-08-05 06:45:32.000000000 -0500
+@@ -46,5 +46,5 @@ target_link_libraries(smokesoprano ${SMO
+ 
+ set_target_properties(smokesoprano PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+ 
+-install(TARGETS smokesoprano DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
++install(TARGETS smokesoprano ${INSTALL_TARGETS_DEFAULT_ARGS} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../soprano_smoke.h DESTINATION include/smoke)
+--- origsrc/smokekde-4.7.0/sopranoclient/CMakeLists.txt	2011-08-08 17:45:39.101858100 -0500
++++ src/smokekde-4.7.0/sopranoclient/CMakeLists.txt	2011-08-05 06:45:32.000000000 -0500
+@@ -37,5 +37,5 @@ target_link_libraries(  smokesopranoclie
+ 
+ set_target_properties(smokesopranoclient PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+ 
+-install(TARGETS smokesopranoclient DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
++install(TARGETS smokesopranoclient ${INSTALL_TARGETS_DEFAULT_ARGS} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../sopranoclient_smoke.h DESTINATION include/smoke)
+--- origsrc/smokekde-4.7.0/sopranoserver/CMakeLists.txt	2011-08-08 17:45:39.103858200 -0500
++++ src/smokekde-4.7.0/sopranoserver/CMakeLists.txt	2011-08-05 06:45:32.000000000 -0500
+@@ -35,5 +35,5 @@ target_link_libraries(  smokesopranoserv
+ 
+ set_target_properties(smokesopranoserver PROPERTIES VERSION 3.0.0 SOVERSION 3 )
+ 
+-install(TARGETS smokesopranoserver DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
++install(TARGETS smokesopranoserver ${INSTALL_TARGETS_DEFAULT_ARGS} )
+ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../sopranoserver_smoke.h DESTINATION include/smoke)

@@ -38,8 +38,7 @@
 -install(TARGETS smokekdecore DESTINATION ${LIB_INSTALL_DIR} )
 +install(TARGETS smokekdecore ${INSTALL_TARGETS_DEFAULT_ARGS} )
  install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../kdecore_smoke.h DESTINATION include/smoke)
--install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kde-config.xml DESTINATION share/${SMOKE_GEN_BIN})
-+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kde-config.xml DESTINATION share/smokegen)
+ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kde-config.xml DESTINATION share/smokegen)
 --- origsrc/smokekde-4.7.0/kdeui/CMakeLists.txt	2011-08-08 17:45:39.063855900 -0500
 +++ src/smokekde-4.7.0/kdeui/CMakeLists.txt	2011-08-05 06:45:32.973113800 -0500
 @@ -79,5 +79,5 @@ target_link_libraries(smokekdeui

@@ -1,8 +1,15 @@
 inherit kde4
 
+NAME="smokekde"
+VERSION=4.10.5
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE4 C bindings"
+DESCRIPTION="SMOKE C wrappers for the KDE libraries"
 
 PATCH_URI="4.7.0-cmake-install.patch"
 
 PKG_NAMES="libsmokekde3 libsmokekde-devel"
 libsmokekde3_CONTENTS="usr/bin/*-3.dll"
+libsmokekde_devel_REQUIRES="libsmokebase-devel"
 libsmokekde_devel_CONTENTS="usr/include/ usr/lib/ usr/share/"

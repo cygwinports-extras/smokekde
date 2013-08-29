@@ -1,5 +1,0 @@
-category: KDE
-requires: libsmokekde3 libsmokeqt-devel
-external-source: smokekde
-sdesc: "KDE4 SMOKE bindings (development)"
-ldesc: "Collection of language bindings for KDE"

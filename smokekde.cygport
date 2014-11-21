@@ -1,7 +1,7 @@
 inherit kde4
 
 NAME="smokekde"
-VERSION=4.13.3
+VERSION=4.14.3
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="KDE4 C bindings"
@@ -15,4 +15,4 @@ libsmokekde_devel_REQUIRES="libsmokebase-devel"
 libsmokekde_devel_CONTENTS="usr/include/ usr/lib/ usr/share/"
 
 # does not compile
-CYGCMAKE_ARGS="-DDISABLE_Kate=ON"
+CYGCMAKE_ARGS="-DDISABLE_Kate=ON -DDISABLE_Okular=ON -DDISABLE_Soprano=ON"
